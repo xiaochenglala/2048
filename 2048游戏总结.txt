@@ -1,0 +1,13 @@
+2048游戏整体采用MVC结构
+M(model):用于存储数据,这里数据比较少,直接放在主函数的board中
+V(view):视图层,用于向用户展示
+C(controller):控制层,用于写逻辑事件
+
+M:board二维数组
+V：基本布局
+C：1、获取方块位置getPosTop(i,j)、getPosLeft(i,j)
+     2、更新二维数组的视图updateBoardView()
+     3、随机位置生成随机数generateOneNumber()->noSpace(board),showNumberWithAnimation(x,y,number)
+     4、事件检测$(document).keydown->上下左右->showMoveAnimation(fromx,fromy,tox,toy),updateScore()
+     5、结束isgameover()->noMove && noSpace
+      
